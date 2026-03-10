@@ -1,3 +1,61 @@
+import json
+import os
+
+FILE = "terbaru.json"
+
+def simpan_data(terbaru):
+    with open(FILE, "w") as f:
+        json.dump(terbaru, f, indent=2)
+
+def muat_data():
+    if os.path.exists(FILE):
+        with open(FILE, "r") as f:
+            return json.load(f)
+    return [
+        {
+            "id": 1,
+        "title": "Belajar Python Programming",
+        "description": "Mempelajari fundamentals Python",
+        "status": "Selesai",
+        "estimasi_waktu_pengerjaan": 60
+        },
+        {
+            "id": 2,
+        "title": "Belajar Machine Learning",
+        "description": "Mempelajari fundamentals Machine Learning",
+        "status": "Belum Selesai",
+        "estimasi_waktu_pengerjaan": 120
+        },
+        {
+            "id": 3,
+        "title": "Belajar Natural Language Processing",
+        "description": "Mempelajari fundamentals NLP",
+        "status": "Selesai",
+        "estimasi_waktu_pengerjaan": 120
+        },
+        {
+            "id": 4,
+        "title": "Belajar Data Visualization",
+        "description": "Mempelajari fundamentals Data Visualization",
+        "status": "Belum Selesai",
+        "estimasi_waktu_pengerjaan": 60
+        },
+        {
+            "id": 5,
+        "title": "Belajar Deep Learning",
+        "description": "Mempelajari fundamentals Deep Learning",
+        "status": "Selesai",
+        "estimasi_waktu_pengerjaan": 120
+        },
+        {
+            "id": 6,
+        "title": "Meditasi",
+        "description": "Merefleksikan diri",
+        "status": "Belum Selesai",
+        "estimasi_waktu_pengerjaan": 30
+        }
+    ]
+
 def lihat_tugas(tugas):
     if not tugas:
         print("Tidak ada tugas yang tersedia.")
