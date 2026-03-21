@@ -1,58 +1,56 @@
-# 📝 Tentang
+# 📝 About
 
- Aplikasi manajemen tugas berbasis terminal yang dibuat dengan Python (bersifat tidak tersimpan).
+A terminal-based task management application built with Python (non-persistent).
 
-## 🚀 Fitur
+## 🚀 Features
 
-- **Lihat Tugas** — Menampilkan semua tugas beserta deskripsi, status, dan estimasi waktu
-- **Tambah Tugas** — Menambahkan tugas baru dengan judul, deskripsi, status, dan estimasi waktu
-- **Tandai Selesai** — Mengubah status tugas menjadi "Selesai" berdasarkan ID
-- **Hapus Tugas** — Menghapus tugas dari daftar berdasarkan ID
+- **View Tasks** — Displays all tasks along with their description, status, and time estimate
+- **Add Task** — Adds a new task with a title, description, status, and time estimate
+- **Mark as Done** — Changes a task's status to "Done" based on its ID
+- **Delete Task** — Removes a task from the list based on its ID
 
 ---
 
-## 🛠️ Teknologi
+## 🛠️ Technologies
 
 - Python 3.11.9
-- Modul bawaan: `unittest`, `io`, `unittest.mock`
+- Built-in modules: `unittest`, `io`, `unittest.mock`
 
 ---
 
-## 📂 Struktur File
-
+## 📂 File Structure
 ```
 📁 todo-list/
-├── script.py                    # File utama program
-├── test_tambah_tugas.py         # Unit test fungsi tambah tugas
-├── test_tandai_selesai.py       # Unit test fungsi tandai selesai
-├── test_lihat_tugas.py          # Unit test fungsi lihat tugas
-├── test_hapus_tugas.py          # Unit test fungsi hapus tugas
+├── script.py                    # Main program file
+├── test_tambah_tugas.py         # Unit test for add task function
+├── test_tandai_selesai.py       # Unit test for mark as done function
+├── test_lihat_tugas.py          # Unit test for view tasks function
+├── test_hapus_tugas.py          # Unit test for delete task function
 └── README.md
 ```
 
-## 📖 Cara Menggunakan
+## 📖 How to Use
 
-Setelah program dijalankan, akan muncul menu seperti berikut:
-
+Once the program is running, a menu will appear as follows:
 ```
-Selamat Datang di Aplikasi To-Do List
-1. Lihat Semua Tugas
-2. Tambah Tugas
-3. Tandai Tugas Selesai
-4. Hapus Tugas
-5. Keluar
-Masukkan pilihan Anda:
+Welcome to the To-Do List Application
+1. View All Tasks
+2. Add Task
+3. Mark Task as Done
+4. Delete Task
+5. Exit
+Enter your choice:
 ```
 
-Masukkan angka **1–5** sesuai operasi yang diinginkan.
+Enter a number from **1–5** corresponding to the desired operation.
 
 ---
 
-## 🧪 Cakupan Unit Test
+## 🧪 Unit Test Coverage
 
-| File Test               | Fungsi yang Diuji   | Skenario                          |
-|-------------------------|---------------------|-----------------------------------|
-| `test_tambah_tugas.py`  | `tambah_tugas()`    | Input valid                       |
-| `test_tandai_selesai.py`| `tandai_selesai()`  | ID valid, ID tidak ditemukan      |
-| `test_lihat_tugas.py`   | `lihat_tugas()`     | List kosong, 1 item, banyak item  |
-| `test_hapus_tugas.py`   | `hapus_tugas()`     | ID valid, ID tidak ditemukan      |
+| Test File               | Function Tested     | Scenarios                              |
+|-------------------------|---------------------|----------------------------------------|
+| `test_tambah_tugas.py`  | `tambah_tugas()`    | Valid input                            |
+| `test_tandai_selesai.py`| `tandai_selesai()`  | Valid ID, ID not found                 |
+| `test_lihat_tugas.py`   | `lihat_tugas()`     | Empty list, 1 item, multiple items     |
+| `test_hapus_tugas.py`   | `hapus_tugas()`     | Valid ID, ID not found                 |
